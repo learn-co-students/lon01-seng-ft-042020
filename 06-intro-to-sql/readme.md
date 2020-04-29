@@ -1,0 +1,6 @@
+- C reate
+- R ead
+- U pdate
+- D delete
+- Ruby Classes/Objects/Instances vs Data in DBs
+- what is Active Record, SQL in context of AR

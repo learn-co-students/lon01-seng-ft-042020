@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+<h2><%= @pet.name %></h2>
+<p><%= @pet.age %></p>
+
+<!-- Override the get request this link will make with a delete request so that we can destroy this pet -->
+<%= link_to 'Delete Pet', pet_path(@pet.id), method: :delete, data: { confirm: "Are you sure you want to delete this pet?"}%> |
+<%= link_to 'Edit', edit_pet_path(@pet.id) %> |
+<%= link_to 'Back', pets_path %>

@@ -1,0 +1,9 @@
+<h2>all bloggers 🧗‍♂️</h2>
+
+<ul>
+  <% @bloggers.each do |blogger| %>
+    <li>
+      <%= link_to blogger.name, blogger %>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,17 @@
+<h1><%= @post.title %> by <%= link_to @post.blogger.name, @post.blogger %></h1>
+
+<h2>
+  Likes: <%= @post.likes %> 
+  <button>
+    <%= link_to "👍👍👍👍👍👍👍", like_post_path(@post.id) %>
+  </button>
+</h2>
+
+<h2>
+  This was a visit to:
+  <%= link_to @post.destination.name + " in " + @post.destination.country, @post.destination %>
+</h2> 
+
+<p>
+  <%= @post.content %>
+</p>

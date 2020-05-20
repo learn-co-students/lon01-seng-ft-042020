@@ -1,0 +1,22 @@
+<h2> <%= @destination.name %></h2>
+<h3> country: <%= @destination.country %> </h3>
+
+<h3>
+  3 most recent posts about this destination:
+</h3>
+
+<ul>
+  <% @most_recent_posts.each do |post| %>
+    <li>  
+      <%= link_to post.title + "DEBUG" + post.created_at.to_i.to_s, post %>
+    </li>
+  <% end %>
+</ul>
+
+<h3>
+  Featured post: <%= link_to @featured_post.title, @featured_post %>
+</h3>
+
+<h3>
+  The average age of all unique bloggers who have written about this destination: <%= @avg_blogger_age %>
+</h3>

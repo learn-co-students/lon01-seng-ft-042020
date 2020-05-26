@@ -1,0 +1,20 @@
+<% if flash[:message] %>
+    <h1><%= flash[:message] %></h1>
+<% end %>
+
+<h3>Correct so far: <%= @number_correct %></h3>
+<%= button_to 'START OVER', '/start-over', method: :get %>
+<h1><%= @question.content %></h1>
+<ul>
+<%= form_with url: '/questions' do | form | %>
+    <%= form.hidden_field :question_id, value: @question.id %>
+    <label>Choices:</label>
+    <% @question.random_answers.each do | answer | %>
+        <div>
+            <label><%= answer.content %></label>
+            <%= form.radio_button :answer_id, answer.id %>
+        </div>
+    <% end %>
+    <%= form.submit "Submit"%>
+<% end %>
+</ul>

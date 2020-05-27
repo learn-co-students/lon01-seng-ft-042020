@@ -1,0 +1,19 @@
+<h1>Sign In</h1>
+
+<% if flash[:errors] %>
+<ul>
+  <% for error in flash[:errors] %>
+    <li style="color: red;"><%= error %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_with model: User.new do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit %>
+<% end %>

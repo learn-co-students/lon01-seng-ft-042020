@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+    
 
     def new
         @question = Question.order("RANDOM()").limit(1)[0]
@@ -7,7 +8,8 @@ class QuestionsController < ApplicationController
     def create
         @question = Question.find(params[:question_id])
         if @question.correct_answer.id == params[:answer_id].to_i
-            session[:number_correct] += 1
+            @user.number_correct += 1
+            @user.save
             flash[:message] = "Correct"
         else
             flash[:message] = "Incorrect"
@@ -16,7 +18,8 @@ class QuestionsController < ApplicationController
     end
 
     def start_over
-        session[:number_correct] = 0
+        @user.number_correct = 0
+        @user.save
         redirect_to '/random-question'
     end
 

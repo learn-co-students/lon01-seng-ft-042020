@@ -1,8 +1,13 @@
 class ApplicationController < ActionController::Base
-  before_action :define_number_correct
+  before_action :define_user, :authenticate
 
-  def define_number_correct
-      session[:number_correct] ||= 0
-      @number_correct = session[:number_correct]
+  def authenticate
+    if session[:user_id] == nil
+      redirect_to '/sign-in'
+    end
+  end
+
+  def define_user
+      @user = User.find_by(id: session[:user_id])
   end
 end

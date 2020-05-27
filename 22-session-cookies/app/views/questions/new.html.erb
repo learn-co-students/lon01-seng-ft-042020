@@ -1,8 +1,10 @@
+<h1>Welcome, <%= @user.username %> <%= button_to 'SIGN OUT', '/sign-out', method: :get %> </h1>
+
 <% if flash[:message] %>
     <h1><%= flash[:message] %></h1>
 <% end %>
 
-<h3>Correct so far: <%= @number_correct %></h3>
+<h3>Correct so far: <%= @user.number_correct %></h3>
 <%= button_to 'START OVER', '/start-over', method: :get %>
 <h1><%= @question.content %></h1>
 <ul>

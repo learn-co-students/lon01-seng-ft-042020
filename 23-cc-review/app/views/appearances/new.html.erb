@@ -1,0 +1,22 @@
+<h1>Create new appearance</h1>
+
+<% if flash[:errors] %>
+<ul>
+  <% for error in flash[:errors] %>
+    <li style="color: red;"><%= error %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_with model: @appearance do |f| %>
+  <%= f.label :guest %>
+  <%= f.collection_select :guest_id, Guest.all, :id, :name %>
+  
+  <%= f.label :episode %>
+  <%= f.collection_select :episode_id, Episode.all, :id, :date %>
+
+  <%= f.label :rating %>
+  <%= f.collection_select :rating, 1..10, :to_s, :to_s %>
+
+  <%= f.submit %>
+<% end  %>

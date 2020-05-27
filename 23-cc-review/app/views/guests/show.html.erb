@@ -1,0 +1,8 @@
+<h1><%= @guest.name %></h1>
+
+<h2>Episodes this guest appeared on:</h2>
+<ul>
+  <% for appearance in @guest.appearances %>
+    <li><h3><%= link_to "#{appearance.episode.date} - #{appearance.rating}", appearance.episode %></h3></li>
+  <% end %>
+</ul>

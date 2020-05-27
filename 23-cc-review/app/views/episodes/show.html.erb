@@ -1,0 +1,8 @@
+<h1><%= @episode.date %></h1>
+
+<h2>Guests for this episode:</h2>
+<ul>
+<% for guest in @episode.guests %>
+  <h3><%= link_to guest.name, guest %></h3>
+<% end %>
+<ul>

@@ -1,0 +1,11 @@
+#dev-dashboard {
+  visibility: hidden;
+}
+
+#dev-toggle {
+  cursor: pointer;
+}
+
+#dev-toggle:hover {
+  opacity: 70%;
+}

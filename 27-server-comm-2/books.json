@@ -1,0 +1,46 @@
+{
+  "books": [
+    {
+      "title": "Soul Kiss",
+      "author": "Shay Youngblood",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/31AYTZWPCPL._SX309_BO1,204,203,200_.jpg",
+      "id": 1
+    },
+    {
+      "title": "Children of Blood & Bone",
+      "author": "Tomi Adeyemi",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/61SB-c0mHGL._SX329_BO1,204,203,200_.jpg",
+      "id": 2
+    },
+    {
+      "title": "1",
+      "author": "2",
+      "cover": "https://marketplace.canva.com/EADapD0KV74/1/0/251w/canva-green-owl-illustration-character-children%27s-book-cover-iWUYwliPyGo.jpg",
+      "id": 3
+    },
+    {
+      "title": "shrek autobio",
+      "author": "shrek",
+      "cover": "",
+      "id": 4
+    },
+    {
+      "title": "new book",
+      "author": "me",
+      "cover": "",
+      "id": 5
+    },
+    {
+      "title": "1234",
+      "author": "2345",
+      "cover": "",
+      "id": 6
+    },
+    {
+      "title": "the book that should show up in the dom!",
+      "author": "me",
+      "cover": "",
+      "id": 7
+    }
+  ]
+}

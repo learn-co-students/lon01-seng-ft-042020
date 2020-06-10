@@ -32,6 +32,7 @@ function showBooks(bookArray) {
 
 function renderBooks(booksArray) {
   showBooks(booksArray);
+  return booksArray;
 }
 
 // ----------------------------------------------------

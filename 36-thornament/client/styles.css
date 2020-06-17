@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  text-align: center;
+}
+
+.title-section {
+  width: 100%;
+}
+
+.player-list-section {
+  width: 30%;
+}
+
+.player-list {
+  list-style: none;
+  padding: 0;
+}
+
+.player-list li {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.player-list li:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.player-details-section {
+  width: 70%;
+}
+
+.player-details-section img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}

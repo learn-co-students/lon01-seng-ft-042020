@@ -1,0 +1,34 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.search-input {
+  font-size: 1rem;
+  padding: 3px 10px;
+}
+
+.pokemon-list {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.pokemon {
+  width: 100px;
+  border: solid 1px black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px;
+  text-align: center;
+}
+
+.pokemon h3 {
+  font-size: 1rem;
+}
+
+.pokemon img {
+  width: 100px;
+  height: 100px;
+}

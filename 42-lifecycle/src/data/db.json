@@ -1,0 +1,52 @@
+{
+  "pokemons": [
+    {
+      "id": 1,
+      "name": "Pikachu",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Pok%C3%A9mon_Pikachu_art.png/220px-Pok%C3%A9mon_Pikachu_art.png",
+      "isEvolution": false
+    },
+    {
+      "id": 2,
+      "name": "Raichu",
+      "image": "https://cdn.bulbagarden.net/upload/8/88/026Raichu.png",
+      "isEvolution": true
+    },
+    {
+      "id": 3,
+      "name": "Bulbasaur",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
+      "isEvolution": false
+    },
+    {
+      "id": 4,
+      "name": "Venusaur",
+      "image": "https://pokestop.io/img/pokemon/venusaur-256x256.png",
+      "isEvolution": true
+    },
+    {
+      "id": 5,
+      "name": "Charmander",
+      "image": "https://cdn.bulbagarden.net/upload/7/73/004Charmander.png",
+      "isEvolution": false
+    },
+    {
+      "id": 6,
+      "name": "Charizard",
+      "image": "https://cdn.bulbagarden.net/upload/thumb/7/7e/006Charizard.png/1200px-006Charizard.png",
+      "isEvolution": true
+    },
+    {
+      "id": 7,
+      "name": "Squirtle",
+      "image": "https://cdn.bulbagarden.net/upload/3/39/007Squirtle.png",
+      "isEvolution": false
+    },
+    {
+      "id": 8,
+      "name": "Blastoise",
+      "image": "https://img.pokemondb.net/artwork/large/blastoise.jpg",
+      "isEvolution": true
+    }
+  ]
+}

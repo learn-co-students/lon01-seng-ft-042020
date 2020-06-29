@@ -1,0 +1,3 @@
+- [x] frontend vs backend routing
+- [ ] installing react router
+- [ ] code examples

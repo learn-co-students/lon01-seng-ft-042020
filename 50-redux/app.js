@@ -1,11 +1,10 @@
 // Redux is globally available, since we've included the link to the CDN
 
-const getServerAction = () => {
-  return fetch("http://localhost:8080/").then((data) => data.json());
-};
-
 const actionHistory = [];
 
+// take in an action (object) describing what is supposed to happen
+// then given the action is valid, perform it
+// and return NEW state
 const counterReducer = (state = 0, action) => {
   actionHistory.push(action);
   switch (action.type) {
@@ -20,7 +19,11 @@ const counterReducer = (state = 0, action) => {
   }
 };
 
+// actions are just plain js objects, and they have to
+// at the very least, have a 'type' key.
+
 const store = Redux.createStore(counterReducer, 0);
+
 store.subscribe(() => {
   const counter = store.getState();
   counterValue.innerHTML = counter;
@@ -33,21 +36,35 @@ const counterValue = document.querySelector("#counter-value");
 const serverActionButton = document.querySelector("#server-action");
 
 plusButton.addEventListener("click", () => {
-  store.dispatch({ type: "INCREMENT", time: +new Date(), source: "UI" });
-});
-zeroButton.addEventListener("click", () => {
-  store.dispatch({ type: "ZERO", time: +new Date(), source: "UI" });
-});
-minusButton.addEventListener("click", () => {
-  store.dispatch({ type: "DECREMENT", time: +new Date(), source: "UI" });
+  store.dispatch({
+    type: "INCREMENT",
+    date: +new Date(),
+    source: "UI",
+  });
 });
 
-// more on that later - and if you want to have the logic for
-// making actions _do_ things, you should check out redux-thunk
+zeroButton.addEventListener("click", () => {
+  store.dispatch({
+    type: "ZERO",
+    date: +new Date(),
+    source: "UI",
+  });
+});
+
+minusButton.addEventListener("click", () => {
+  store.dispatch({
+    type: "DECREMENT",
+    date: +new Date(),
+    source: "UI",
+  });
+});
+
+const getServerAction = () => {
+  return fetch("http:/localhost:8080").then((d) => d.json());
+};
+
 serverActionButton.addEventListener("click", () => {
   getServerAction().then((action) => {
     store.dispatch(action);
   });
 });
-
-// add server and amend action type to say where did the action come from
